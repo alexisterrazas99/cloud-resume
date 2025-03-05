@@ -3,21 +3,20 @@ name: Deploy to Azure Blob Storage
 on:
   push:
     branches:
-      - main  # Change this if your branch is different
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Upload files to Azure Storage
-      uses: azure/CLI@v1
-      with:
-        inlineScript: |
-          az storage blob upload-batch --account-name ${{ secrets.AZURE_STORAGE_ACCOUNT_NAME }} \
-            --account-key ${{ secrets.AZURE_STORAGE_ACCESS_KEY }} \
-            -d '$web' \
-            -s .
+      - name: Upload to Azure Blob Storage
+        uses: azure/azure-storage-blob-upload@v1
+        with:
+          account-name: ${{ secrets.azure_storage_account_name }}
+          account-key: ${{ secrets.azure_storage_access_key }}
+          container-name: ${{ secrets.AZURE_CONTAINER_NAME }}  # Keep this if you're using this secret for container name
+          source: './'  # Current directory
+          destination: '/'  # Root of the container
