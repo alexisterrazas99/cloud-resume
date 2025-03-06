@@ -8,15 +8,22 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
 
-      - name: Upload to Azure Blob Storage
-        uses: azure/azure-storage-blob-upload@v1
-        with:
-          account-name: ${{ secrets.azure_storage_account_name }}
-          account-key: ${{ secrets.azure_storage_access_key }}
-          container-name: ${{ secrets.AZURE_CONTAINER_NAME }}  # Keep this if you're using this secret for container name
-          source: './'  # Current directory
-          destination: '/'  # Root of the container
+    steps:
+      # Checkout the repository code
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Install Azure CLI
+      - name: Install Azure CLI
+        run: |
+          curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+
+      # Upload files to Azure Blob Storage
+      - name: Upload files to Azure Blob Storage
+        run: |
+          az storage blob upload-batch --destination ${{ secrets.AZURE_CONTAINER_NAME }} \
+            --source . \
+            --account-name ${{ secrets.AZURE_STORAGE_ACCOUNT_NAME }} \
+            --account-key ${{ secrets.AZURE_STORAGE_ACCESS_KEY }} \
+            --overwrite
