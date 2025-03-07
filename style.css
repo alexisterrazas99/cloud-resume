@@ -1,120 +1,63 @@
-/* Modern Apple-like Tech Resume Styling */
+/* General Reset */
 body {
-    font-family: "SF Mono", "Monaco", "Courier New", monospace;
-    background: linear-gradient(135deg, #f5f5f7, #e8eaed);
-    margin: 0;
-    padding: 40px 20px;
-    display: flex;
-    justify-content: center;
-}
-
-.resume-container {
-    max-width: 750px;
-    background: #fff;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    text-align: left;
-}
-
-/* Header Styling */
-header {
+    font-family: "SF Pro Text", Arial, sans-serif;
+    background-color: #f5f5f7;
+    color: #333;
     text-align: center;
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 15px;
-    margin-bottom: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background: white;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
     font-size: 28px;
     font-weight: bold;
-    color: #222;
-}
-
-h2 {
-    font-size: 18px;
-    font-weight: 500;
-    color: #666;
+    margin: 5px 0;
 }
 
 p {
-    font-size: 14px;
-    color: #444;
+    font-size: 16px;
+    color: #555;
 }
 
-a {
-    color: #007aff;
+nav {
+    margin-top: 15px;
+}
+
+nav a {
     text-decoration: none;
+    color: #007aff;
+    margin: 0 15px;
+    font-size: 16px;
+    font-weight: 500;
 }
 
-a:hover {
+nav a:hover {
     text-decoration: underline;
 }
 
-/* Section Styling */
-h3 {
-    font-size: 16px;
+/* Intro Section */
+.intro {
+    margin: 50px auto;
+    max-width: 600px;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 22px;
     color: #007aff;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 5px;
-    margin-top: 25px;
 }
 
-.job {
-    margin-bottom: 15px;
-}
-
-h4 {
+/* Footer */
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    background: white;
     font-size: 14px;
-    font-weight: bold;
-    color: #222;
-    margin-bottom: 5px;
-}
-
-.company {
-    font-size: 12px;
-    font-weight: 500;
-    color: #666;
-    margin-bottom: 8px;
-}
-
-ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-ul li {
-    font-size: 14px;
-    color: #333;
-    padding-left: 20px;
-    position: relative;
-    margin-bottom: 6px;
-}
-
-ul li::before {
-    content: "•";
-    color: #007aff;
-    position: absolute;
-    left: 0;
-    font-size: 16px;
-    line-height: 1;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .resume-container {
-        padding: 20px;
-    }
-
-    h1 {
-        font-size: 24px;
-    }
-
-    h2 {
-        font-size: 16px;
-    }
-
-    p, ul li {
-        font-size: 13px;
-    }
 }
