@@ -19,7 +19,7 @@ jobs:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       - name: Verify Azure Container Name
-        run: echo "Azure Container Name: ${{ secrets.AZURE_CONTAINER_NAME }}"
+        run: echo "Azure Container Name:${{ secrets.AZURE_CONTAINER_NAME }}"
 
       - name: Upload files to Azure Blob Storage
         run: |
