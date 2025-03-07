@@ -6,36 +6,42 @@ body {
     color: #1d1d1f;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    line-height: 1.8;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
 h1, h2, h3 {
     font-weight: 600;
-    text-align: center;
     color: #1d1d1f;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     letter-spacing: -1px;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 h2 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: #555;
 }
 
 .contact {
-    text-align: center;
     font-size: 1rem;
     color: #6e6e73;
+    margin-bottom: 20px;
 }
 
 .contact a {
     color: #0071e3;
     text-decoration: none;
+    font-weight: 500;
 }
 
 .contact a:hover {
@@ -43,37 +49,52 @@ h2 {
 }
 
 .section {
+    width: 90%;
     max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
+    padding: 25px;
     background: #ffffff;
     border-radius: 12px;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
 }
 
 p, li {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: #1d1d1f;
 }
 
 ul {
-    padding-left: 20px;
+    padding-left: 0;
+    list-style: none;
 }
 
 li {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 .job-title {
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: #0071e3;
     text-transform: uppercase;
 }
 
+img.profile {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
 @media (max-width: 768px) {
     .section {
-        padding: 15px;
-        margin: 20px;
+        padding: 20px;
+    }
+    h1 {
+        font-size: 2.5rem;
+    }
+    h2 {
+        font-size: 1.6rem;
     }
 }
