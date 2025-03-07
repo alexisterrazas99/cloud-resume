@@ -1,52 +1,49 @@
+/* Modern Apple-like Tech Resume Styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: "SF Mono", "Monaco", "Courier New", monospace;
+    background: linear-gradient(135deg, #f5f5f7, #e8eaed);
     margin: 0;
-    padding: 0;
-    line-height: 1.6;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
 }
 
 .resume-container {
-    max-width: 800px;
-    margin: 20px auto;
+    max-width: 750px;
     background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: left;
 }
 
+/* Header Styling */
 header {
     text-align: center;
-    border-bottom: 2px solid #0073e6;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
 }
 
 h1 {
-    font-size: 26px;
-    margin: 0;
-    color: #333;
+    font-size: 28px;
+    font-weight: bold;
+    color: #222;
 }
 
 h2 {
     font-size: 18px;
-    color: #0073e6;
-    margin-top: 5px;
+    font-weight: 500;
+    color: #666;
 }
 
-h3 {
-    color: #0073e6;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 5px;
-    margin-top: 20px;
-}
-
-p, ul {
-    color: #333;
+p {
+    font-size: 14px;
+    color: #444;
 }
 
 a {
-    color: #0073e6;
+    color: #007aff;
     text-decoration: none;
 }
 
@@ -54,20 +51,70 @@ a:hover {
     text-decoration: underline;
 }
 
-.job h4 {
-    color: #444;
+/* Section Styling */
+h3 {
+    font-size: 16px;
+    color: #007aff;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    margin-top: 25px;
+}
+
+.job {
+    margin-bottom: 15px;
+}
+
+h4 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #222;
     margin-bottom: 5px;
 }
 
+.company {
+    font-size: 12px;
+    font-weight: 500;
+    color: #666;
+    margin-bottom: 8px;
+}
+
 ul {
-    list-style: square;
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    font-size: 14px;
+    color: #333;
     padding-left: 20px;
+    position: relative;
+    margin-bottom: 6px;
 }
 
-.resume-container section {
-    margin-bottom: 20px;
+ul li::before {
+    content: "•";
+    color: #007aff;
+    position: absolute;
+    left: 0;
+    font-size: 16px;
+    line-height: 1;
 }
 
-.resume-container .skills ul {
-    columns: 2;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .resume-container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    p, ul li {
+        font-size: 13px;
+    }
 }
