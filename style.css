@@ -1,8 +1,9 @@
+/* Global Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     margin: 0;
     padding: 20px;
-    background-color: #eaeaea;
+    background-color: #121212;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,65 +12,71 @@ body {
 
 .resume-container {
     width: 850px;
-    background: white;
+    background: #1a1a1a;
     padding: 40px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 255, 0, 0.7); /* Neon green shadow */
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #00FF00; /* Neon green border */
 }
 
+/* Header Section */
 header {
     text-align: center;
     padding-bottom: 10px;
     margin-bottom: 20px;
-    border-bottom: 3px solid #333;
+    border-bottom: 3px solid #00FF00; /* Neon green border */
 }
 
 h1 {
     margin: 0;
-    font-size: 28px;
-    color: #222;
+    font-size: 32px;
+    color: #00FF00; /* Neon Green */
     font-weight: bold;
     text-transform: uppercase;
+    letter-spacing: 3px;
 }
 
 h2 {
     margin: 5px 0;
-    font-size: 18px;
-    color: #444;
+    font-size: 20px;
+    color: #00FF00; /* Neon Green */
     font-weight: normal;
 }
 
+/* Text and Links */
 p, a {
-    color: #555;
+    color: #00FF00; /* Neon Green */
     text-decoration: none;
 }
 
 a:hover {
     text-decoration: underline;
+    color: #FF6347; /* Orange Red hover effect */
 }
 
+/* Section Styles */
 section {
     margin-bottom: 20px;
 }
 
 h3 {
-    border-bottom: 2px solid #333;
+    border-bottom: 2px solid #00FF00; /* Neon Green underline */
     padding-bottom: 5px;
-    color: #222;
+    color: #00FF00; /* Neon Green */
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 22px;
+    letter-spacing: 2px;
 }
 
 h4 {
     margin: 10px 0 5px;
-    color: #222;
-    font-size: 16px;
+    color: #00FF00; /* Neon Green */
+    font-size: 18px;
 }
 
 h5 {
     margin: 5px 0;
-    font-size: 14px;
+    font-size: 16px;
     color: #555;
     font-weight: bold;
 }
@@ -81,12 +88,14 @@ ul {
 
 li {
     margin-bottom: 5px;
+    color: #00FF00; /* Neon Green */
 }
 
 strong {
-    color: #222;
+    color: #FF6347; /* Orange Red for emphasis */
 }
 
+/* Footer Section */
 .footer {
     text-align: center;
     font-size: 14px;
