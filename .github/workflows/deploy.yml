@@ -18,10 +18,17 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
+      - name: Verify Azure Container Name
+        run: echo "Azure Container Name: ${{ secrets.AZURE_CONTAINER_NAME }}"
+
       - name: Upload files to Azure Blob Storage
         run: |
+          echo "Account Name: ${{ secrets.AZURE_STORAGE_ACCOUNT_NAME }}"
+          echo "Container Name: ${{ secrets.AZURE_CONTAINER_NAME }}"
+          echo "Account Key: ${{ secrets.AZURE_STORAGE_ACCESS_KEY }}"
+          
           az storage blob upload-batch \
             --account-name ${{ secrets.AZURE_STORAGE_ACCOUNT_NAME }} \
             --account-key ${{ secrets.AZURE_STORAGE_ACCESS_KEY }} \
             --destination ${{ secrets.AZURE_CONTAINER_NAME }} \
-            --source ./cloud-resume 
+            --source ./cloud-resume
