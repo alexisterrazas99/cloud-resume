@@ -23,5 +23,5 @@ jobs:
           az storage blob upload-batch \
             --account-name ${{ secrets.AZURE_STORAGE_ACCOUNT_NAME }} \
             --account-key ${{ secrets.AZURE_STORAGE_ACCESS_KEY }} \
-            --destination ${{ secrets.AZURE_CONTAINER_NAME }} \
+            --destination ${{ secrets.AZURE_CONTAINER_NAME }} --source ./cloud-resume \
             --source .
